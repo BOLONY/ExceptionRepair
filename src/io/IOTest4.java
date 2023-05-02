@@ -38,17 +38,19 @@ public class IOTest4 {
 					//예외 발생 했는지 출력 
 				}
 				System.out.println(aFile.length()+" Byte");
+				try {
+					in.close();
+				} catch(IOException e){
+					e.printStackTrace();
+				}
+				break;
 			}
 			
 			else {
 				System.out.println("파일이 없습니다. 다시 입력하세요");
 			}
 			
-			try {
-				in.close();
-			} catch(IOException e){
-				e.printStackTrace();
-			}
+			
 		}//while
 
 	}// main()
